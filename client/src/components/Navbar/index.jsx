@@ -11,14 +11,10 @@ const Navbar = () => {
     setVisible(!visible);
   };
 
-  // If you do not want to auto-close the mobile drawer when a path is selected
-  // Delete or comment out the code block below
-  // From here
   let { pathname: location } = useLocation();
   useEffect(() => {
     setVisible(false);
   }, [location]);
-  // Upto here
 
   return (
     <nav className="navbar">

@@ -5,6 +5,11 @@ import jwt from 'jsonwebtoken'
 import { createAccessToken } from '../libs/jwt.js';
 import { TOKEN_SECRET } from '../config.js';
 
+const passwordEncrypter = async (password) => {
+    const passwordHash = await bcrypt.hash(password, 10);
+    return passwordHash;
+};
+
 export const register = async (req, res) => {
 	const { email, username, password } = req.body;
 
@@ -13,7 +18,7 @@ export const register = async (req, res) => {
 		const userFound = await User.findOne({ email });
 		if (userFound) return res.status(400).json({ message: 'The email is already in use' });
 
-		const passwordHash = await bcrypt.hash(password, 10);
+        const passwordHash = await passwordEncrypter(password);
 
 		const newUser = new User({
 			email,
