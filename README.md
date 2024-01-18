@@ -2,6 +2,9 @@
 
 Esta aplicación de gestión de tareas fue desarrollada para practicar con en el stack MERN (MongoDB, Express, React, Node.js). La aplicación permite a los usuarios registrar, editar, eliminar y visualizar tareas pendientes. Además, incluye funcionalidades de registro de usuarios y manejo de sesiones mediante cookies y tokens. Queda pendiente poder marcar como acompletada una tarea y editar el perfil de un usuario.
 
+![Screenshot1 of the app](./photos/1.jpg)
+![Screenshot2 of the app](./photos/2.jpg)
+
 ## Tecnologías Utilizadas
 
 ### Backend
@@ -26,6 +29,7 @@ Esta aplicación de gestión de tareas fue desarrollada para practicar con en el
 
 1. **Crea un archivo .env basado en el .env.example. Agrega valores reales.**
    ```bash
+   cd backend
    cp .env.example .env
    ```
    

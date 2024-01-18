@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useTasks } from "../context/TasksContext";
 import { Spin, message, Card, Row, Col, Popconfirm, Button, Tooltip } from "antd";
-import { LoadingOutlined, DeleteOutlined, EditOutlined, PlusCircleOutlined } from '@ant-design/icons';
+import { LoadingOutlined, DeleteOutlined, EditOutlined, PlusCircleOutlined, CalendarOutlined } from '@ant-design/icons';
 
 import { Link } from 'react-router-dom';
 
@@ -163,7 +163,7 @@ function TasksPage() {
                     }
                   >
                     <p>{task.description}</p>
-                    <p>{moment(task.date).format('DD/MM/YYYY')}</p>
+                    <p><CalendarOutlined />  {moment(task.date).format('DD/MM/YYYY')}</p>
                   </Card>
                 </Col>
               ))

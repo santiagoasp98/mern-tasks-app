@@ -1,9 +1,6 @@
 body {
   margin: 0;
-  background-image: url('https://images.pexels.com/photos/281260/pexels-photo-281260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* background-color: rgb(72, 133, 237); */
+  background: radial-gradient(125% 125% at 50% 10%, #000 40%, rgb(91, 37, 240) 100%);
 }
 
 #root {
